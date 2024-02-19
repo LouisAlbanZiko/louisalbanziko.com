@@ -1,0 +1,4 @@
+tls:
+  port: 443
+  cert: "./tls/certificate.crt"
+  key: "./tls/privatekey.key"
