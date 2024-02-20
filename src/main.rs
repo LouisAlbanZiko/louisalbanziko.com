@@ -17,12 +17,13 @@ struct Config {
 #[async_std::main]
 async fn main() -> tide::Result<()> {
 	let default_config = Config {
-		tls: TLSConfig { port: 443, cert: "./tls/certificate.crt".to_string(), key: "./tls/privatekey.key".to_string() }
+		tls: TLSConfig { port: 443, cert: "./tls/public.key.pem".to_string(), key: "./tls/private.key.pem".to_string() }
 	};
 
-	let yaml = serde_yaml::to_string(&default_config).unwrap();
-
-	let config: Config = serde_yaml::from_str(&yaml)?;
+	let config: Config = match std::fs::read_to_string("config.yaml") {
+		Ok(s) => serde_yaml::from_str(&s)?,
+		Err(_) => default_config,
+	};
 
     let mut app = tide::new();
     app.at("/").get(|_| async { Ok("Hello TLS") });
