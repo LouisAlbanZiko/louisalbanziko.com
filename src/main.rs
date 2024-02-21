@@ -1,3 +1,6 @@
+use std::{borrow::Cow, collections::HashMap};
+
+use tide::{http::mime, Request, Response};
 use tide_rustls::TlsListener;
 use serde::{Deserialize, Serialize};
 
@@ -26,7 +29,33 @@ async fn main() -> tide::Result<()> {
 	};
 
     let mut app = tide::new();
-    app.at("/").get(|_| async { Ok("Hello TLS") });
+
+	app.at("/riot/privacy").get(|_| async { Ok(Response::builder(200).content_type(mime::HTML).body(r#"
+
+	<h3> Privacy Policy </h3>
+
+	This application collects data from custom games and accounts that are made available by the RIOT API. To get said data we also store RIOT API tokens which give access to them.
+
+	This data is used to provide information about custom games or accounts through the discord bot commands.
+
+	All data is stored in a database where sensitive information (like API tokens) is encrypted.
+
+	"#)) });
+
+	app.at("/riot/tos").get(|_| async { Ok(Response::builder(200).content_type(mime::HTML).body(r#"
+	
+	<h3> Terms of Use </h3>
+
+	Please don't spam commands.
+
+	Checkout privacy policy <a href="/riot/tos">here</a>.
+
+	"#)) });
+
+    app.at("/riot/oauth").get(oauth);
+
+	app.at("/riot/logout").get(|_| async { Ok(Response::builder(200).content_type(mime::HTML).body("You have logged out.")) });
+
     app.listen(
         TlsListener::build()
             .addrs(format!("0.0.0.0:{}", config.tls.port))
@@ -34,4 +63,21 @@ async fn main() -> tide::Result<()> {
             .key(config.tls.key),
         ).await?;
     Ok(())
+}
+
+async fn oauth(req: Request<()>) -> tide::Result {
+	let params = url_params(&req);
+	if params.contains_key("code") {
+		Ok(Response::builder(200).content_type(mime::HTML).body(format!("Your code is '{}'", params["code"])).build())
+	} else {
+		Ok(Response::builder(400).body(format!("No code specified")).build())
+	}
+}
+
+fn url_params(req: &Request<()>) -> HashMap<Cow<'_, str>, Cow<'_, str>> {
+	let mut map = HashMap::new();
+	for (name, value) in req.url().query_pairs() {
+		map.insert(name, value);
+	}
+	map
 }
