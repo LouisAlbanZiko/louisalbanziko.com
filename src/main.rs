@@ -48,7 +48,7 @@ async fn main() -> tide::Result<()> {
 
 	Please don't spam commands.
 
-	Checkout privacy policy <a href="/riot/tos">here</a>.
+	Checkout privacy policy <a href="/riot/privacy">here</a>.
 
 	"#)) });
 
