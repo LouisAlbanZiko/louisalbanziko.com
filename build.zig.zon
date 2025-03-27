@@ -1,0 +1,16 @@
+.{
+    .name = .louisalbanziko_com,
+    .version = "0.1.0",
+    .fingerprint = 0x20441369e593c772, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{
+        .http_server = .{
+            .path = "http_server",
+        },
+    },
+    .paths = .{
+        "www",
+        "build.zig",
+        "build.zig.zon",
+    },
+}

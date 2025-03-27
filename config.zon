@@ -1,0 +1,12 @@
+.{
+	.client_timeout_s = 120,
+	.poll_timeout_s = 25,
+	.http = .{
+		.port = 80,
+	},
+	.https = .{
+		.port = 443,
+		.cert = "localhost.crt",
+		.key = "localhost.key",
+	},
+}
