@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/css/themes/dark" rel="stylesheet">
+		{{global_css}}
+		<style>
+			pe-title {
+				margin: 0.2em auto;
+			}
+
+			pe-section {
+				justify-content: space-around;
+			}
+
+			pe-header > a {
+				padding: 15px 20px;
+			
+				font-size: 20px;
+			}
+			
+			pe-header > #demo {
+				margin-left: auto;
+			}
+
+			h1, h2, p {
+				margin: 0.3em 0;
+			}
+
+			.card {
+				width: 60%;
+				margin: 20px auto;
+			}
+
+			.skill-list {
+				list-style-type: none;
+				display: flex;
+				width: 40%;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+
+			.skill-list-item {
+				font-size: 1.2em;
+				margin: 0.4em;
+				padding: 0.4em;
+				border: 2px solid var(--color-border);
+			}
+		</style>
+	</head>
+	<body style="flex-direction: column;">
+		{{header}}
+
+		<pe-section class="pe-row" style="justify-content: space-around;">
+			<pe-column style="padding: 20px; align-items: center;">
+				<h1>Hi, I am Louis Alban Ziko</h1>
+				<h2>A Software Developer</h2>
+				<p>I specialize in backend, systems and game development.</p>
+				<p>I have worked with a large range of programming languages and technologies:</p>
+				<ul class="skill-list">
+					<li class="skill-list-item">C/C++</li>
+					<li class="skill-list-item">Java</li>
+					<li class="skill-list-item">Javascript</li>
+					<li class="skill-list-item">NodeJS</li>
+					<li class="skill-list-item">Python</li>
+					<li class="skill-list-item">HTML & CSS</li>
+					<li class="skill-list-item">Linux</li>
+					<li class="skill-list-item">Powershell</li>
+					<li class="skill-list-item">Bash</li>
+					<li class="skill-list-item">Rust</li>
+					<li class="skill-list-item">Zig</li>
+					<li class="skill-list-item">SQL</li>
+				</ul>
+			</pe-column>
+		</pe-section>
+
+		<pe-section class="pe-column">
+			<pe-title>
+				Work Experience
+			</pe-title>
+			<pe-column style="padding: 20px; justify-content: space-around;">
+				<pe-column class="card">
+					<h1>Technical Support</h1>
+					<h2>at CData</h2>
+					<p>15/11/2024 - 04/09/2025 | Tirana, Albania</p>
+					<p>CData is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
+					<p>My job was to address the clients technical and non-technical problems as well as help the clients setup the products. Usually we would do this via email however sometimes this required voice calls for more difficult problems. Also I would find and report bugs/issues in the products.
+					</p>
+					<p>I used a various of technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
+				</pe-column>
+				<pe-column class="card">
+					<h1>Software Developer</h1>
+					<h2>at IT-TaskForce</h2>
+					<p>01/09/2018 - 01/05/2020 | Remote, France</p>
+					<p>IT-TaskForce is a french Tech contracting company. During university I worked there for about a year but had to leave as it was interfering with my studies.</p>
+					<p>I was responsible for creating and maintaining Azure functions that the clients of IT-TaskForce requested. The functions were written in Javascript using NodeJS and involved moving data from and to different databases and files.</p>
+				</pe-column>
+				<pe-column class="card">
+					<h1>Technology/IT Teacher</h1>
+					<h2>at EFIT Tirana</h2>
+					<p>01/09/2019 - 01/06/2024 | Tirana, Albania</p>
+					<p>EFIT Tirana is the French School of Tirana.</p>
+					<p>For three years, with a year break, I tought students basics of Computer Science to first year High School students and Technology to Middle School students.</p>
+					<p>The teaching was done in french which is my native language.</p>
+				</pe-column>
+			</pe-column>
+		</pe-section>
+
+
+		<pe-section class="pe-column">
+			<pe-title>
+				Education
+			</pe-title>
+			<pe-column class="card">
+				<h1>Bachelors in Computer Engineering</h1>
+				<h2>at Epoka University</h2>
+				<p>2018 - 2021 | Tirana, Albania</p>
+				<p>I did 3 years of courses at Epoka University and ended with a 2.9 GPA.</p>
+				<p>The courses ranged from linear algebra, calculus to Java Development, Web Development to Algorithms and Data Structures.</p>
+				<p>This allowed me to get a general knowledge in Software Development which is what interested me the most.</p>
+			</pe-column>
+		</pe-section>
+
+		<pe-section class="pe-column">
+			<pe-title>
+				Projects
+			</pe-title>
+			<pe-column style="justify-content: space-around;">
+				<h2 style="margin: 10px auto;">Checkout my projects on github:</h2>
+				<pe-row style="justify-content: space-between; margin: 10px auto;">
+					<a href="https://github.com/LouisAlbanZiko" target="_blank">
+						<img src="/home/github-mark-white.png" width="64px" height="64px">
+					</a>
+				</pe-row>
+			</pe-column>
+		</pe-section>
+
+		<pe-section class="pe-column">
+			<pe-title>
+				Contact
+			</pe-title>
+			<pe-column style="justify-content: space-around;">
+				<p style="margin: 5px auto;">Email: louisalbanziko1610@gmail.com</p>
+				<p style="margin: 5px auto;">I don't use social media much.</p>
+				<p style="margin: 5px auto;">To contact me send me an email.</p>
+				<p style="margin: 5px auto;">No need to be formal :)</p>
+			</pe-column>
+		</pe-section>
+
+		<footer></footer>
+
+		{{global_js}}
+	</body>
+</html>
+

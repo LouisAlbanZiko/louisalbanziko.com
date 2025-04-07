@@ -1,0 +1,33 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	/*flex-direction: column;*/
+
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-family);
+}
+
+a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: var(--font-family);
+}
+
+input {
+	color: var(--color-text);
+	font-family: var(--font-family);
+}
+
+button {
+	color: var(--color-text);
+	font-family: var(--font-family);
+}
+
+p {
+	font-size: 1.2em;
+}

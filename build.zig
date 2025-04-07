@@ -10,6 +10,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
         .web_dir = b.path("www"),
+        .mod_dir = b.path("mods"),
         .exe_name = exe_name,
     });
 

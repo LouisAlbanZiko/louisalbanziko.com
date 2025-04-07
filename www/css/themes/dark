@@ -1,0 +1,15 @@
+:root {
+	/*--color-1-light: #3498db;*/
+	/*--color-1-normal: #2770a1;*/
+	/*--color-1-dark: #005ac9;*/
+	/**/
+	/*--color-2-normal: #ac2828;*/
+
+	--color-border: #191a1d;
+	--color-background: rgb(30 31 32 / 1);
+	--color-foreground: rgb(14 14 14 / 1);
+	--color-text: #F0F0F0;
+
+	--font-family: 'Montserrat';
+}
+
