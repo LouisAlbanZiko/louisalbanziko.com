@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{global_css}}
+	</head>
+	<body>
+	
+		{{global_js}}
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/css/themes/dark" rel="stylesheet">
+		{{global_css}}
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+			}
+			form {
+				padding: 20px;
+				background-color: var(--color-foreground);
+				gap: 12px;
+
+				border-radius: 10px;
+				border: 1px solid var(--color-border);
+			}
+			input {
+				padding: 12px;
+				background-color: var(--color-background);
+
+				border-radius: 10px;
+				border: 1px solid var(--color-border);
+
+				font-size: 1.2em;
+			}
+			input::placeholder {
+				color: var(--color-text);
+				opacity: 0.6;
+			}
+			button {
+				padding: 12px;
+				background-color: var(--color-background);
+
+				border-radius: 10px;
+				border: 1px solid var(--color-border);
+
+				font-size: 1.2em;
+			}
+			#response {
+				visibility: visible;
+				color: #ac2828;
+				font-weight: bold;
+				font-size: 1em;
+			}	
+			#response.htmx-request {
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="pe-column">
+			<pe-title style="text-align: center; padding: 40px;">Login</pe-title>
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<button hx-post="" hx-swap="innerHTML" hx-target="#response" hx-indicator="#indicator,#response">
+				<div>Login</div>
+				<div id="indicator"></div>
+			</button>
+			<div id="response"></div>
+			<pe-row style="justify-content: space-between;">
+				<a href="./signup"></a>
+				<a href="./signup">Signup</a>
+			</pe-row>
+		</form>
+		{{global_js}}
+	</body>
+</html>
