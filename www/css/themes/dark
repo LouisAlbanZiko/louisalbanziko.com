@@ -6,9 +6,10 @@
 	/*--color-2-normal: #ac2828;*/
 
 	--color-border: #191a1d;
-	--color-background: rgb(30 31 32 / 1);
-	--color-foreground: rgb(14 14 14 / 1);
+	--color-background: rgb(14 14 14 / 1);
+	--color-foreground: rgb(30 31 32 / 1);
 	--color-text: #F0F0F0;
+	--color-text-2: #3498db;
 
 	--font-family: 'Montserrat';
 }

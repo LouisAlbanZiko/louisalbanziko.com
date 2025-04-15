@@ -5,28 +5,15 @@
 		<link href="/css/themes/dark" rel="stylesheet">
 		{{global_css}}
 		<style>
-			pe-header > a {
-				padding: 15px 20px;
-			
-				font-size: 20px;
-			}
-			
-			pe-header > #demo {
-				margin-left: auto;
-			}
 		</style>
 	</head>
 	<body style="flex-direction: column;">
 		{{header}}
 
 		<pe-section class="pe-column">
-			<p>This website is hosted using a custom webserver written in Zig.</p>
-			<p>The reason is twofold:</p>
-			<ol>
-				<li>Learning how websites work: TCP Connections, HTTP protocol, Websockets etc</li>
-				<li>Providing a portofolio for myself</li>
-			</ol>
-
+			<pe-title>Introduction</pe-title>
+			<p>This website is served using a custom webserver written in Zig that runs as a systemd service on a linux machine.</p>
+			<p>I did this as a learning exercise to learn about how the HTTP protocol works as well as how to build a Web Framework work.</p>
 		</pe-section>
 
 		{{global_js}}

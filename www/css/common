@@ -5,7 +5,6 @@ html, body {
 
 body {
 	display: flex;
-	/*flex-direction: column;*/
 
 	background-color: var(--color-background);
 	color: var(--color-text);
@@ -30,4 +29,14 @@ button {
 
 p {
 	font-size: 1.2em;
+}
+
+pe-header > a {
+	padding: 15px 20px;
+
+	font-size: 20px;
+}
+
+pe-header > #demo {
+	margin-left: auto;
 }

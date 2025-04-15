@@ -5,14 +5,10 @@ pe-header {
 
 pe-section {
 	display: flex;
-	width: 90%;
+	width: 100%;
 
-	margin: 20px auto;
+	margin: 60px auto;
 	padding: 20px;
-
-	border-radius: 15px;
-	border: 1px solid var(--color-border);
-	background-color: var(--color-foreground);
 }
 
 pe-title {
