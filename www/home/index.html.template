@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="/css/themes/dark" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        
+		{{theme}}
 		{{global_css}}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 		<style>
 			.emphasize {
 				font-weight: 700;

@@ -1,15 +1,15 @@
 const std = @import("std");
 const server = @import("server");
 
-const DB = server.DB;
+const Database = server.Database;
 
 const Self = struct {
     gpa: std.mem.Allocator,
-    db: *DB,
+    db: *Database,
 };
 var self: Self = undefined;
 
-pub fn init(gpa: std.mem.Allocator, db: *DB) !void {
+pub fn init(gpa: std.mem.Allocator, db: *Database) !void {
     self.gpa = gpa;
     self.db = db;
 
@@ -21,7 +21,7 @@ pub fn deinit() void {}
 const argon2 = std.crypto.pwhash.argon2;
 const PW_PARAMS = argon2.Params{ .t = 2, .m = 16_000, .p = 1 };
 
-pub fn new_profile(name: [:0]const u8, password: [:0]const u8) !DB.UserID {
+pub fn new_profile(name: [:0]const u8, password: [:0]const u8) !Database.UserID {
     const user_id = try self.db.new_user();
 
     var password_hash_buffer: [1024]u8 = undefined;
@@ -39,7 +39,7 @@ pub fn new_profile(name: [:0]const u8, password: [:0]const u8) !DB.UserID {
     return user_id;
 }
 
-pub fn check_login(name: [:0]const u8, password: [:0]const u8) !?DB.UserID {
+pub fn check_login(name: [:0]const u8, password: [:0]const u8) !?Database.UserID {
     var stmt = try self.db.conn.prepare_v2("SELECT user_id, password_hash FROM profile WHERE name = ?");
     defer stmt.finalize();
 
@@ -50,7 +50,7 @@ pub fn check_login(name: [:0]const u8, password: [:0]const u8) !?DB.UserID {
         const db_password_hash = try stmt.column_blob(1);
 
         if (argon2.strVerify(db_password_hash, password, .{ .allocator = self.gpa })) {
-            const user_id: DB.UserID = @bitCast(db_user_id);
+            const user_id: Database.UserID = @bitCast(db_user_id);
             return user_id;
         } else |_| {
             return null;

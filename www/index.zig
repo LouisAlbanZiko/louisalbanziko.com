@@ -4,7 +4,6 @@ const http = server.http;
 
 const common = @import("/common.zig");
 
-pub fn http_GET(_: *http.Context, _: *const http.Request, res: *http.Response) std.mem.Allocator.Error!void {
-    res.code = ._302_FOUND;
-    try res.header("Location", "/home");
+pub fn http_GET(ctx: *http.Context, _: *const http.Request) std.mem.Allocator.Error!http.Response {
+    return http.Response.redirect(ctx.arena(), "/home");
 }

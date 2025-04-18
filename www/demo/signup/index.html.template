@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="/css/themes/dark" rel="stylesheet">
+		{{theme}}
 		{{global_css}}
 		<style>
 			body {
