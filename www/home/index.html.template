@@ -43,7 +43,8 @@
 				display: flex;
 				width: 40%;
 				flex-wrap: wrap;
-				justify-content: space-around;
+				justify-content: center;
+				gap: 16px;
 			}
 
 			.skill-list-item {
