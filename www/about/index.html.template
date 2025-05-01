@@ -5,16 +5,52 @@
 		{{theme}}
 		{{global_css}}
 		<style>
+			#document {
+				width: 60%;
+				margin: auto;
+			}
+			h1 {
+				margin-top: 2.0em 0;
+			}
+			p, li {
+				margin: 0.3em 0;
+			}
 		</style>
 	</head>
-	<body style="flex-direction: column;">
+	<body class="pe-column" style="justify-content: space-around;">
 		{{header}}
 
-		<pe-section class="pe-column">
-			<pe-title>Introduction</pe-title>
-			<p>This website is served using a custom webserver written in Zig that runs as a systemd service on a linux machine.</p>
-			<p>I did this as a learning exercise to learn about how the HTTP protocol works as well as how to build a Web Framework work.</p>
-		</pe-section>
+		<div id="document">
+			<h1>Introduction</h1>
+			<p>This website is served using a custom Web Server written in Zig that runs as a systemd service on a linux machine.</p>
+			<p>This article will go through the design and implementation of this server as well as some challenges I had to overcome during it.</p>
+        	
+			<h1>Motivation and Goals</h1>
+			<p>Before this project, I had experience working on the backend of a WordPress site and interacting with various HTTP APIs during my time at CData. However, I felt like I was missing a deeper, low-level understanding of how websites and APIs actually work, especially how HTTP operates beneath the frameworks and libraries most developers rely on.</p>
+			<p>To bridge that gap, I decided to learn the HTTP protocol more thoroughly by reading the <a href="https://datatracker.ietf.org/doc/html/rfc9112">official specification</a> and implementing it from scratch. I used the HTTP/1.1 version of the protocol since HTTP/2 and HTTP/3 seemed to be more complex.</p>
+			<p>At the same time, I had just started learning <a href="https://ziglang.org/">Zig</a>, a low-level systems programming language with a strong focus on safety, performance, and simplicity. It felt like the perfect opportunity to apply what I was learning, so I chose Zig as the language for the HTTP parser.</p>
+			<p>Of course, in order to test my parser, I needed to actually receive HTTP requests, which meant diving into TCP networking. After some research, I decided to work directly with POSIX sockets (conveniently available in Zig's standard library). That decision kicked off the rest of the project: building a fully functional web server from the ground up.</p>
+        	
+			<h1>Basic Flow</h1>
+			<p>The server supports both HTTP and HTTPS and listens on two separate sockets, one for each protocol. When a client connects, the server accepts the connection and checks which socket it came through.<p>
+			<p>If the client came through the HTTPS socket the server initiates a TLS handshake using the OpenSSL library. If the handshake is successful, all further communication on that connection is encrypted and decrypted before reaching the rest of the server pipeline.</p>
+			<p>Once the server receives data from a client, it's passed to the HTTP parser which returns a Request struct. That request is then passed to the router which finds a resource based on the path and method.</p>
+			<p>The router handles three types of resources:</p>
+			<ul>
+				<li>Static files: If the path matches a static file resource in the "structure" of the server then the content is returned with a 200 Ok status.</li>
+				<li>Custom Handlers: If the path matches a custom Zig handler instead of a static file, the corresponding function is called. The handlers return a Response struct containing the Status Code, headers and body. Custom handlers are designed to be infallible under normal conditions, meaning errors must be handled within the handler. The only possible failure is if memory allocation fails, in which case the server responds with a 500 Internal Error.</li>
+				<li>Fallback: If neiher a file nor a handler is found the server returns 404 Not Found.</li>
+			</ul>
+			<p>The response is then written to a buffer and sent to client.</p>
+			<p>Here's a diagram showcasing this flow:</p>
+			<img src="/about/flow-diagram.svg"/>
+
+			<h1>TCP Networking</h1>
+			<p></p>
+
+			<h1>HTTP Parser</h1>
+			<p></p>
+		</div>
 
 		{{global_js}}
 	</body>
