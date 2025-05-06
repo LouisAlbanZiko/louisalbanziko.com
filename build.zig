@@ -6,7 +6,7 @@ pub fn build(b: *std.Build) void {
 
     const exe_name: []const u8 = "louisalbanziko.com";
 
-    const http_server = b.dependency("http_server", .{
+    const hermes = b.dependency("hermes", .{
         .target = target,
         .optimize = optimize,
         .web_dir = b.path("www"),
@@ -14,11 +14,11 @@ pub fn build(b: *std.Build) void {
         .exe_name = exe_name,
     });
 
-    b.getInstallStep().dependOn(http_server.builder.getInstallStep());
+    b.getInstallStep().dependOn(hermes.builder.getInstallStep());
 
     b.installFile("config.zon", "config.zon");
 
-    const exe = http_server.artifact(exe_name);
+    const exe = hermes.artifact(exe_name);
     b.installArtifact(exe);
 
     const run_exe = b.addRunArtifact(exe);
