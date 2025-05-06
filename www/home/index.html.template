@@ -9,6 +9,10 @@
 				font-weight: 700;
 			}
 
+			a {
+				color: var(--color-text-2);
+			}
+
 			i {
 				font-size: 2.4em;
 			}
@@ -196,8 +200,14 @@
 
 		<h1>Projects</h1>
 		<pe-section class="pe-column">
+			<pe-column class="subsection">
+				<h2><span class="emphasize">Hermes</span></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p>This website is served using the <a href="https://github.com/LouisAlbanZiko/hermes">Hermes WebServer</a>.</p>
+				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
+			</pe-column>
 			<pe-column style="justify-content: space-around;">
-				<h2 style="margin: 10px auto;">Checkout my projects on github:</h2>
+				<h2 style="margin: 10px auto;">Checkout my other projects on github:</h2>
 				<pe-row style="justify-content: space-between; margin: 10px auto;">
 					<a href="https://github.com/LouisAlbanZiko" target="_blank">
 						<img src="/home/github-mark-white.png" width="64px" height="64px">
@@ -209,7 +219,7 @@
 		<h1>Contact</h1>
 		<pe-section class="pe-column">
 			<pe-column style="justify-content: space-around;">
-				<p style="margin: 0.3em auto;">Email: <span class="emphasize">louisalbanziko1610@gmail.com</span></p>
+				<p style="margin: 0.3em auto;">Email: <span class="emphasize">louisalbanziko@proton.me</span></p>
 				<hr style="width: 10%; text-align: center; margin: 20px auto;">
 				<p style="margin: 0.2em auto;">I don't use social media much.</p>
 				<p style="margin: 0.2em auto;">To contact me send me an email.</p>
