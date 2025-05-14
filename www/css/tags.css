@@ -1,5 +1,6 @@
 pe-header {
-	display: flex;
+	width: 100%;
+	display: block flex;
 	background-color: var(--color-foreground);
 }
 
@@ -12,6 +13,7 @@ pe-section {
 }
 
 pe-title {
+	display: inline;
 	color: var(--color-text);
 	font-weight: 600;
 	font-size: 2.4em;
@@ -20,10 +22,12 @@ pe-title {
 pe-row {
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 }
 
 pe-column {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 }
 
