@@ -5,6 +5,7 @@ const http = server.http;
 pub const header: []const u8 =
     \\<pe-header>
     \\  <a href="/home">Home</a>
+    \\  <a href="/blog/home">Blog</a>
     \\</pe-header>
     \\
 ;

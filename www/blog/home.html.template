@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{theme}}
+		{{global_css}}
+		<style>
+			#content {
+				padding: 20px;
+			}
+			#content a {
+				margin: auto;
+
+				font-size: 2rem;
+				color: var(--color-text);
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		{{header}}
+		<pe-column id="content">
+			{{content}}
+		</pe-column>
+		{{global_js}}
+	</body>
+</html>

@@ -1,0 +1,55 @@
+markdown {
+	display: flex;
+	flex-direction: column;
+
+	margin: 0;
+
+	max-height: calc(100vh - 53px - 84px);
+	overflow-y: scroll;
+}
+
+markdown code {
+	border-radius: 6px;
+	background-color: var(--color-foreground);
+	padding: 0.1rem 0.2rem;
+	text-wrap: wrap;
+	font-size: 1.2rem;
+}
+
+markdown code:hover {
+	cursor: pointer;
+}
+
+markdown pre {
+	border-radius: 10px;
+	background-color: var(--color-foreground);
+	padding: 10px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+markdown pre > img:hover {
+	cursor: pointer;
+	background-color: var(--color-background);
+}
+
+markdown pre > code {
+	border-radius: 0px;
+	background-color: var(--color-foreground);
+	padding: 0px;
+
+	font-size: 1.2rem;
+}
+
+markdown pre code:hover {
+	cursor: auto;
+}
+
+markdown p, markdown li {
+	margin: 0;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+}
+

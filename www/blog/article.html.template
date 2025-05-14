@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{theme}}
+		{{global_css}}
+		<title>{{title}}</title>
+		<link href="/css/markdown.css" rel="stylesheet">
+		<style>
+			html {
+				font-size: 16px;
+			}
+			body {
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+			}
+			#md-navigation a {
+				text-decoration: underline;
+				color: var(--color-text-2);
+				font-size: 1.4rem;
+				line-height: 1.8rem;
+			}
+		</style>
+	</head>
+	<body>
+		{{header}}
+		<pe-column style="">
+			<pe-title style="margin: 20px auto;">{{title}}</pe-title>
+			<pe-row style="">
+				<pe-column id="md-navigation" style="margin: 0 20px; width: 30%;">
+					<h1>Table of Contents</h1>
+				</pe-column>
+				<markdown>
+					{{content}}
+					<div style="margin: 30px;"></div>
+				</markdown>
+			</pe-row>
+		</pe-column>
+		{{global_js}}
+		<script src="/js/markdown.js"></script>
+	</body>
+</html>
