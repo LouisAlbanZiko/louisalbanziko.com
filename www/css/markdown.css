@@ -4,7 +4,6 @@ markdown {
 
 	margin: 0;
 
-	max-height: calc(100vh - 53px - 84px);
 	overflow-y: scroll;
 }
 

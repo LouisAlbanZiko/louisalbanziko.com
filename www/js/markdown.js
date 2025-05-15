@@ -1,4 +1,17 @@
+function outerHeight(element) {
+	let height = element.offsetHeight;
+	height += parseInt(window.getComputedStyle(element).getPropertyValue('margin-top'));
+	height += parseInt(window.getComputedStyle(element).getPropertyValue('margin-bottom'));
+	return height;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+	const pe_header = document.querySelector('pe-header');
+	const pe_title = document.querySelector('pe-title');
+	const markdown_height = window.innerHeight - outerHeight(pe_header) - outerHeight(pe_title);
+	console.log(`markdown_height=${markdown_height}`);
+	document.querySelector('markdown').style.height = `${markdown_height}px`;
+
 	document.querySelectorAll('markdown code').forEach((element) => {
 		const parentElement = element.parentElement;
 		if (parentElement.tagName.toLowerCase() !== 'pre') {
@@ -33,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('markdown h1').forEach((element) => {
 		element.id = element.textContent;
 		headings.push(element.textContent);
-		console.log(element.textContent);
 	});
 	const list = document.createElement('ul');
 	document.getElementById('md-navigation').appendChild(list);
