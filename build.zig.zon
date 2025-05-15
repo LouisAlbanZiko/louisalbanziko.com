@@ -7,6 +7,9 @@
         .hermes = .{
             .path = "hermes",
         },
+        .cmark = .{
+            .path = "cmark",
+        },
     },
     .paths = .{
         "www",
