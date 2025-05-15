@@ -11,7 +11,7 @@ pub fn http_GET(ctx: http.Context, _: *const http.Request) std.mem.Allocator.Err
     for (articles.resources.keys()) |path| {
         const title = try ctx.arena.dupe(u8, path[0 .. path.len - 3]);
         std.mem.replaceScalar(u8, title, '_', ' ');
-        try std.fmt.format(content.writer(), "<a href=\"./article?name={s}\">{s}</a>", .{ path, title });
+        try std.fmt.format(content.writer(), "<li><a href=\"./article?name={s}\">{s}</a></li>", .{ path, title });
     }
 
     var body = std.ArrayList(u8).init(ctx.arena);

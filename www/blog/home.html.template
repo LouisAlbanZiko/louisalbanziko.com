@@ -10,8 +10,8 @@
 			#content a {
 				margin: auto;
 
-				font-size: 2rem;
-				color: var(--color-text);
+				font-size: 1.2rem;
+				color: var(--color-text-2);
 				text-decoration: underline;
 			}
 		</style>
@@ -19,7 +19,11 @@
 	<body>
 		{{header}}
 		<pe-column id="content">
-			{{content}}
+			<p>The posts below are a list blog posts containg either my thoughts on certain subjects or guides on how to setup something.</p>
+			<h2>Posts</h2>
+			<ul>
+				{{content}}
+			</ul>
 		</pe-column>
 		{{global_js}}
 	</body>
