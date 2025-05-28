@@ -16,7 +16,7 @@ body {
 
 a {
 	color: var(--color-text-2);
-	text-decoration: none;
+	text-decoration: underline;
 	font-family: var(--font-family);
 }
 
@@ -34,6 +34,7 @@ pe-header > a {
 	color: var(--color-text);
 	padding: 15px 20px;
 	font-size: 20px;
+	text-decoration: none;
 }
 
 pe-header > #demo {
