@@ -169,7 +169,7 @@
 				</pe-column>
 				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
 				<pe-column class="subsection">
-					<h2><span>Technology/IT Teacher</span> at EFIT Tirana</h2>
+					<h2><span class="emphasize">Technology/IT Teacher</span> <span style="font-weight: 100;">at EFIT Tirana</span></h2>
 					<p>01/09/2019 - 01/06/2024 | Tirana, Albania</p>
 					<hr style="width: 50%; text-align: left; margin-left: 0;">
 					<pe-column style="margin: 15px 0;">
@@ -184,7 +184,7 @@
 		<h1>Education</h1>
 		<pe-section class="pe-column">
 			<pe-column class="subsection">
-				<h2><span class="emphasize">Bachelors in Computer Engineering</span> <span>at Epoka University</span></h1>
+				<h2><span class="emphasize">Bachelors in Computer Engineering</span> <span style="font-weight: 100;">at Epoka University</span></h1>
 				<p>2018 - 2021 | Tirana, Albania</p>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<pe-column>
