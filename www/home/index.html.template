@@ -154,7 +154,7 @@
 					<pe-column style="margin: 15px 0;">
 						<p>CData is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
 						<p>My job was to address the clients technical and non-technical problems as well as help the clients setup the products. Usually we would do this via email however sometimes this required voice calls for more difficult problems. Also I would find and report bugs/issues in the products.</p>
-						<p>I used a various of technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
+						<p>I used various technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
 					</pe-column>
 				</pe-column>
 				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
