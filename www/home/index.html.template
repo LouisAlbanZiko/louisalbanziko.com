@@ -211,7 +211,7 @@
 			<pe-column class="subsection">
 				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<p>Discord X Lol is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
+				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
 				<p>The bot was written in python and used the <a href="https://developer.riotgames.com/apis">RIOT API</a> to retrieve data about games and the discord API (using a wrapper library) to ask certains games to be retrieved as well as calculating the statistics.</p>
 			</pe-column>
 			<pe-column style="justify-content: space-around;">
