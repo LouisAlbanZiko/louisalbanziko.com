@@ -68,6 +68,11 @@
 				width: 60%;
 				margin: 40px auto;
 			}
+
+			.subsection > h2 > a {
+				text-decoration: none;
+				color: var(--color-text);
+			}
 		</style>
 	</head>
 	<body style="flex-direction: column;">
@@ -198,10 +203,16 @@
 		<h1>Projects</h1>
 		<pe-section class="pe-column">
 			<pe-column class="subsection">
-				<h2><span class="emphasize">Hermes</span></h2>
+				<h2><a href="https://github.com/LouisAlbanZiko/hermes" class="emphasize">Hermes</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p>This website is served using the <a href="https://github.com/LouisAlbanZiko/hermes">Hermes WebServer</a>.</p>
 				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
+			</pe-column>
+			<pe-column class="subsection">
+				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p>Discord X Lol is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
+				<p>The bot was written in python and used the <a href="https://developer.riotgames.com/apis">RIOT API</a> to retrieve data about games and the discord API (using a wrapper library) to ask certains games to be retrieved as well as calculating the statistics.</p>
 			</pe-column>
 			<pe-column style="justify-content: space-around;">
 				<h2 style="margin: 10px auto;">Checkout my other projects on github:</h2>
