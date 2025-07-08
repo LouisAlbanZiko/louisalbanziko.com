@@ -15,14 +15,14 @@ pub fn http_GET(ctx: http.Context, req: *const http.Request) std.mem.Allocator.E
         return http.Response.redirect(ctx.arena, "/blog");
     };
 
-    const articles = ctx.current_dir.resources.get("md").?.directory;
+    const articles = ctx.resources.lookup("blog/md").?.value.directory;
 
     var has_article: ?Article = null;
-    for (articles.resources.keys()) |article_name| {
-        if (std.mem.eql(u8, name, article_name)) {
+    for (articles.resources) |article_res| {
+        if (std.mem.eql(u8, name, article_res.path)) {
             has_article = .{
-                .title = article_name,
-                .content = articles.resources.get(article_name).?.file,
+                .title = article_res.path,
+                .content = article_res.value.file,
             };
         }
     }

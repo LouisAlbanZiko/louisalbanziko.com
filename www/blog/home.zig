@@ -5,13 +5,13 @@ const http = server.http;
 const common = @import("/common.zig");
 
 pub fn http_GET(ctx: http.Context, _: *const http.Request) std.mem.Allocator.Error!http.Response {
-    const articles = ctx.current_dir.resources.get("md").?.directory;
+    const articles = ctx.resources.lookup("blog/md").?.value.directory;
 
     var content = std.ArrayList(u8).init(ctx.arena);
-    for (articles.resources.keys()) |path| {
-        const title = try ctx.arena.dupe(u8, path[0 .. path.len - 3]);
+    for (articles.resources) |res| {
+        const title = try ctx.arena.dupe(u8, res.path[0 .. res.path.len - 3]);
         std.mem.replaceScalar(u8, title, '_', ' ');
-        try std.fmt.format(content.writer(), "<li><a href=\"./article?name={s}\">{s}</a></li>", .{ path, title });
+        try std.fmt.format(content.writer(), "<li><a href=\"./article?name={s}\">{s}</a></li>", .{ res.path, title });
     }
 
     var body = std.ArrayList(u8).init(ctx.arena);
