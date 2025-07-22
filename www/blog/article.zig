@@ -33,7 +33,7 @@ pub fn http_GET(ctx: http.Context, req: *const http.Request) std.mem.Allocator.E
         std.mem.replaceScalar(u8, title, '_', ' ');
 
         var body = std.ArrayList(u8).init(ctx.arena);
-        try server.util.template(body.writer(), @embedFile("article.html.template"), .{
+        try server.util.template(body.writer(), @embedFile("article.html.ignore"), .{
             .title = title,
             .content = html,
             .global_css = common.global_css,
