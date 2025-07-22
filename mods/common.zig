@@ -14,6 +14,7 @@ pub const global_css: []const u8 =
     \\<link href="/css/tags.css" rel="stylesheet">
     \\<link href="/css/classes.css" rel="stylesheet">
     \\<link href="/css/common.css" rel="stylesheet">
+    \\<link rel="icon" href="/favicon.svg" type="image/svg+xml">
     \\
 ;
 
