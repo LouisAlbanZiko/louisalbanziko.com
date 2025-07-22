@@ -3,7 +3,7 @@
     .poll_timeout_s = 25,
     .data_dir = "data/",
     .http = .{
-        .port = 8080,
+        .port = 3280,
     },
     .https = .{
         .port = 8443,
