@@ -209,6 +209,11 @@
 				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
 			</pe-column>
 			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/blbctl" class="emphasize">blbctl</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/LouisAlbanZiko/blbctl">BackLight Brightness ConTroL</a> is a command utility fo retrieving and changing the values of brightness of the backlight on linux systems.</p>
+			</pe-column>
+			<pe-column class="subsection">
 				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
