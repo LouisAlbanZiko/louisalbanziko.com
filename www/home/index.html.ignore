@@ -7,17 +7,32 @@
 		<style>
 			.emphasize {
 				font-weight: 700;
+				color: var(--color-2);
+			}
+			.hide {
+				font-weight: 100;
+				color: var(--color-3);
 			}
 
 			i {
 				font-size: 2.4rem;
 			}
+			
+			hr {
+				border-color: var(--color-3);
+			}
+			hr.section-separator {
+				width: 35%;
+				text-align: center;
+				margin: auto;
+			}
 
 			h1 {
 				width: 100%;
-				background-color: var(--color-foreground);
 				text-align: center;
 				padding: 0.3rem 0;
+				margin-top: 100px;
+				color: var(--color-1);
 			}
 
 			h2 {
@@ -29,7 +44,7 @@
 			}
 
 			pe-section {
-				padding: 40px 0;
+				padding: 0;
 				justify-content: space-around;
 			}
 
@@ -57,7 +72,6 @@
 			.skill-list-item > i {
 				padding: 0.4rem;
 				margin: auto;
-				background-color: var(--color-border);
 			}
 			.skill-list-item > p {
 				text-align: center;
@@ -66,25 +80,22 @@
 
 			.subsection {
 				width: 60%;
-				margin: 40px auto;
+				margin: 20px auto;
 			}
 
 			.subsection > h2 > a {
 				text-decoration: none;
-				color: var(--color-text);
 			}
 		</style>
 	</head>
 	<body style="flex-direction: column;">
-		{{header}}
-
 		<pe-section style="justify-content: space-around;">
 			<pe-column style="padding: 20px; align-items: center;">
 				<p style="">Hello &amp Welcome</p>
 				<p style="font-weight: 300; font-size: 2.4em">I am <span class="emphasize">Louis Alban Ziko</span></p>
 				<p style="">A Software Developer</p>
-				<p>I specialize in backend, systems and game development.</p>
-				<p>I have worked with a large range of programming languages and technologies:</p>
+				<p>I have made games, libraries, small applications and websites.</p>
+				<p>I have worked with a large range of programming languages and technologies including the following.</p>
 				<ul class="skill-list">
 					<li class="skill-list-item">
 						<i class="devicon-c-plain"></i>
@@ -150,57 +161,8 @@
 			</pe-column>
 		</pe-section>
 
-		<h1>Work Experience</h1>
-		<pe-section class="pe-column">
-				<pe-column class="subsection">
-					<h2><span class="emphasize">Technical Support<span> <span style="font-weight: 100;">at CData</span></h2>
-					<p>15/11/2024 - 04/09/2025 | Tirana, Albania</p>
-					<hr style="width: 50%; text-align: left; margin-left: 0;">
-					<pe-column style="margin: 15px 0;">
-						<p>CData is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
-						<p>My job was to address the clients technical and non-technical problems as well as help the clients setup the products. Usually we would do this via email however sometimes this required voice calls for more difficult problems. Also I would find and report bugs/issues in the products.</p>
-						<p>I used various technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
-					</pe-column>
-				</pe-column>
-				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
-				<pe-column class="subsection">
-					<h2><span class="emphasize">Software Developer</span> <span style="font-weight: 100;">at IT-TaskForce</span></h2>
-					<p>01/09/2018 - 01/05/2020 | Remote, France</p>
-					<hr style="width: 50%; text-align: left; margin-left: 0;">
-					<pe-column style="margin: 15px 0;">
-						<p>IT-TaskForce is a french Tech contracting company. During university I worked there for about a year but had to leave as it was interfering with my studies.</p>
-						<p>I was responsible for creating and maintaining Azure functions that the clients of IT-TaskForce requested. The functions were written in Javascript using NodeJS and involved moving data from and to different databases and files.</p>
-					</pe-column>
-				</pe-column>
-				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
-				<pe-column class="subsection">
-					<h2><span class="emphasize">Technology/IT Teacher</span> <span style="font-weight: 100;">at EFIT Tirana</span></h2>
-					<p>01/09/2019 - 01/06/2024 | Tirana, Albania</p>
-					<hr style="width: 50%; text-align: left; margin-left: 0;">
-					<pe-column style="margin: 15px 0;">
-						<p>EFIT Tirana is the French School of Tirana.</p>
-						<p>For three years, with a year break, I tought students basics of Computer Science to first year High School students and Technology to Middle School students.</p>
-						<p>The teaching was done in french which is my native language.</p>
-					</pe-column>
-				</pe-column>
-		</pe-section>
-
-
-		<h1>Education</h1>
-		<pe-section class="pe-column">
-			<pe-column class="subsection">
-				<h2><span class="emphasize">Bachelors in Computer Engineering</span> <span style="font-weight: 100;">at Epoka University</span></h1>
-				<p>2018 - 2021 | Tirana, Albania</p>
-				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<pe-column>
-					<p>I did 3 years of courses at Epoka University and ended with a 2.9 GPA.</p>
-					<p>The courses ranged from linear algebra, calculus to Java Development, Web Development to Algorithms and Data Structures.</p>
-					<p>This allowed me to get a general knowledge in Software Development which is what interested me the most.</p>
-				</pe-column>
-			</pe-column>
-		</pe-section>
-
 		<h1>Projects</h1>
+		<hr class="section-separator">
 		<pe-section class="pe-column">
 			<pe-column class="subsection">
 				<h2><a href="https://github.com/LouisAlbanZiko/hermes" class="emphasize">Hermes</a></h2>
@@ -229,7 +191,60 @@
 			</pe-column>
 		</pe-section>
 
+		<h1>Work Experience</h1>
+		<hr class="section-separator">
+		<pe-section class="pe-column">
+				<pe-column class="subsection">
+					<h2><span class="emphasize">Technical Support</span> <span class="hide">at CData</span></h2>
+					<p>15/11/2024 - 04/09/2025 | Tirana, Albania</p>
+					<hr style="width: 50%; text-align: left; margin-left: 0;">
+					<pe-column style="margin: 15px 0;">
+						<p>CData is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
+						<p>My job was to address the clients technical and non-technical problems as well as help the clients setup the products. Usually we would do this via email however sometimes this required voice calls for more difficult problems. Also I would find and report bugs/issues in the products.</p>
+						<p>I used various technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
+					</pe-column>
+				</pe-column>
+				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
+				<pe-column class="subsection">
+					<h2><span class="emphasize">Software Developer</span> <span class="hide">at IT-TaskForce</span></h2>
+					<p>01/09/2018 - 01/05/2020 | Remote, France</p>
+					<hr style="width: 50%; text-align: left; margin-left: 0;">
+					<pe-column style="margin: 15px 0;">
+						<p>IT-TaskForce is a french Tech contracting company. During university I worked there for about a year but had to leave as it was interfering with my studies.</p>
+						<p>I was responsible for creating and maintaining Azure functions that the clients of IT-TaskForce requested. The functions were written in Javascript using NodeJS and involved moving data from and to different databases and files.</p>
+					</pe-column>
+				</pe-column>
+				<hr style="width: 55%; border: 2px solid var(--color-border); text-align: center; margin: auto;">
+				<pe-column class="subsection">
+					<h2><span class="emphasize">Technology/IT Teacher</span> <span class="hide">at EFIT Tirana</span></h2>
+					<p>01/09/2019 - 01/06/2024 | Tirana, Albania</p>
+					<hr style="width: 50%; text-align: left; margin-left: 0;">
+					<pe-column style="margin: 15px 0;">
+						<p>EFIT Tirana is the French School of Tirana.</p>
+						<p>For three years, with a year break, I tought students basics of Computer Science to first year High School students and Technology to Middle School students.</p>
+						<p>The teaching was done in french which is my native language.</p>
+					</pe-column>
+				</pe-column>
+		</pe-section>
+
+
+		<h1>Education</h1>
+		<hr class="section-separator">
+		<pe-section class="pe-column">
+			<pe-column class="subsection">
+				<h2><span class="emphasize">Bachelors in Computer Engineering</span> <span class="hide">at Epoka University</span></h1>
+				<p>2018 - 2021 | Tirana, Albania</p>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<pe-column>
+					<p>I did 3 years of courses at Epoka University and ended with a 2.9 GPA.</p>
+					<p>The courses ranged from linear algebra, calculus to Java Development, Web Development to Algorithms and Data Structures.</p>
+					<p>This allowed me to get a general knowledge in Software Development which is what interested me the most.</p>
+				</pe-column>
+			</pe-column>
+		</pe-section>
+
 		<h1>Contact</h1>
+		<hr class="section-separator">
 		<pe-section class="pe-column">
 			<pe-column style="justify-content: space-around;">
 				<p style="margin: 0.3rem auto;">Email: <span class="emphasize">louisalbanziko@proton.me</span></p>
