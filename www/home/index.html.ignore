@@ -43,6 +43,10 @@
 				margin: 0.3rem 0;
 			}
 
+			a {
+				color: var(--color-2);
+			}
+
 			pe-section {
 				padding: 0;
 				justify-content: space-around;
