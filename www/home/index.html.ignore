@@ -175,6 +175,19 @@
 				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
 			</pe-column>
 			<pe-column class="subsection">
+				<h2><a href="https://wordlehelper.louisalbanziko.com" class="emphasize">Wordle Helper</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> is a game where you need to guess a secret 5 letter word. The secret word is the same for everyone and changes daily. For every guess you get some information back about the secret word in the form of colors:</p>
+				<ul>
+					<li>Grey means that the letter is not in the secret word (with some exception)</li>
+					<li>Yellow means the letter is contained in the secret word but not at that position</li>
+					<li>Green means that the letter is at the correct position</li>
+				</ul>
+				<p>Playing the game for a while, I got interested to see if I could optimize the guesses I made. This led me to <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">this video</a> from 3Blue1Brown which explained a simple optimization of the game. Based on the video, I implemented <a href="https://wordlehelper.louisalbanziko.com/">Wordle Helper</a> where you can enter the guesses and colors from the game and it will give you suggested words for the next guess.</p>
+				<p>The usage is as follows: You type a guess into Wordle and put the result in the Helper. The word you can by typing or using the onscreen keyboard and the colors by either right or left clicking the letters. Then type enter and the server will calculate the words that fit and out of those, the best guesses.</p>
+				<p>The application is written using <a href="https://github.com/LouisAlbanZiko/hermes">Hermes</a>. The code can be found <a href="https://github.com/LouisAlbanZiko/wordle_helper">here</a></p>
+			</pe-column>
+			<pe-column class="subsection">
 				<h2><a href="https://github.com/LouisAlbanZiko/blbctl" class="emphasize">blbctl</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p><a href="https://github.com/LouisAlbanZiko/blbctl">BackLight Brightness ConTroL</a> is a command utility fo retrieving and changing the values of brightness of the backlight on linux systems.</p>
@@ -200,10 +213,10 @@
 		<pe-section class="pe-column">
 				<pe-column class="subsection">
 					<h2><span class="emphasize">Technical Support</span> <span class="hide">at CData</span></h2>
-					<p>15/11/2024 - 04/09/2025 | Tirana, Albania</p>
+					<p>15/11/2023 - 04/09/2024 | Tirana, Albania</p>
 					<hr style="width: 50%; text-align: left; margin-left: 0;">
 					<pe-column style="margin: 15px 0;">
-						<p>CData is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
+						<p><a href="https://www.cdata.com/">CData</a> is an American company which provides data connectivity tools. I worked at CData for about a year at the Tirana offices.</p>
 						<p>My job was to address the clients technical and non-technical problems as well as help the clients setup the products. Usually we would do this via email however sometimes this required voice calls for more difficult problems. Also I would find and report bugs/issues in the products.</p>
 						<p>I used various technologies from SQL (which was part of the main products) to Java, C#, Powershell etc. I had to understand how certain API's work (ex: Google Sheets API) and how the product interacts with them to troubleshoot problems.</p>
 					</pe-column>
