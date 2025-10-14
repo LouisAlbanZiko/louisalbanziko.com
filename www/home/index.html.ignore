@@ -7,11 +7,11 @@
 		<style>
 			.emphasize {
 				font-weight: 700;
-				color: var(--color-2);
+				color: var(--color-1);
 			}
 			.hide {
 				font-weight: 100;
-				color: var(--color-3);
+				color: var(--color-contrast);
 			}
 
 			i {
@@ -19,7 +19,7 @@
 			}
 			
 			hr {
-				border-color: var(--color-3);
+				border-color: var(--color-contrast);
 			}
 			hr.section-separator {
 				width: 35%;
@@ -44,7 +44,7 @@
 			}
 
 			a {
-				color: var(--color-2);
+				color: var(--color-1);
 			}
 
 			pe-section {

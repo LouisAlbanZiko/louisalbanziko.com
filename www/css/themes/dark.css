@@ -1,25 +1,7 @@
-/*:root {
-	/*--color-1-light: #3498db;*/
-	/*--color-1-normal: #2770a1;*/
-	/*--color-1-dark: #005ac9;*/
-	/**/
-	/*--color-2-normal: #ac2828;*/
-
-	/*--color-border: #191a1d;
-	--color-background: rgb(14 14 14 / 1);
-	--color-foreground: rgb(30 31 32 / 1);
-	--color-text: #F0F0F0;
-	--color-text-2: #3498db;
-
-	--font-family: 'Montserrat';
-}*/
-
 :root {
 	--color-main: #080300;
 	--color-contrast: #f7f6f6;
 
-	--color-1: #0069b5;
-	--color-2: #019fe3;
-	--color-3: #b5e3f4;
+	--color-1: #019fe3;
 }
 
