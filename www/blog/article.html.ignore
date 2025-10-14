@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{{theme}}
 		{{global_css}}
 		<title>{{title}}</title>
 		<link href="/css/markdown.css" rel="stylesheet">

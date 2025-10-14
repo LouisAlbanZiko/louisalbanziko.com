@@ -37,7 +37,6 @@ pub fn http_GET(ctx: http.Context, req: *const http.Request) std.mem.Allocator.E
             .title = title,
             .content = html,
             .global_css = common.global_css,
-            .theme = common.dark_theme,
             .global_js = common.global_js,
             .header = common.header,
         });

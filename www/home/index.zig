@@ -8,7 +8,6 @@ pub fn http_GET(ctx: http.Context, _: *const http.Request) std.mem.Allocator.Err
     var body = std.ArrayList(u8).init(ctx.arena);
     try server.util.template(body.writer(), @embedFile("index.html.ignore"), .{
         .global_css = common.global_css,
-        .theme = common.dark_theme,
         .global_js = common.global_js,
         .header = common.header,
     });
