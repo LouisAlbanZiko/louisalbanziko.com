@@ -6,11 +6,9 @@
 		<style>
 			.emphasize {
 				font-weight: 700;
-				color: var(--color-1);
 			}
 			.hide {
 				font-weight: 100;
-				color: var(--color-contrast);
 			}
 
 			i {
@@ -31,7 +29,7 @@
 				text-align: center;
 				padding: 0.3rem 0;
 				margin-top: 100px;
-				color: var(--color-1);
+				color: var(--color-contrast);
 			}
 
 			h2 {
@@ -51,36 +49,6 @@
 				justify-content: space-around;
 			}
 
-			.card {
-				width: 60%;
-				margin: 20px auto;
-			}
-
-			.skill-list {
-				list-style-type: none;
-				display: flex;
-				width: 40%;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 16px;
-			}
-
-			.skill-list-item {
-				display: flex;
-				flex-direction: column;
-
-				font-size: 1.2rem;
-				margin: 0.7rem;
-			}
-			.skill-list-item > i {
-				padding: 0.4rem;
-				margin: auto;
-			}
-			.skill-list-item > p {
-				text-align: center;
-				font-size: 0.9rem;
-			}
-
 			.subsection {
 				width: 60%;
 				margin: 20px auto;
@@ -92,119 +60,13 @@
 		</style>
 	</head>
 	<body style="flex-direction: column;">
+		{{header}}
 		<pe-section style="justify-content: space-around;">
 			<pe-column style="padding: 20px; align-items: center;">
 				<p style="">Hello &amp Welcome</p>
 				<p style="font-weight: 300; font-size: 2.4em">I am <span class="emphasize">Louis Alban Ziko</span></p>
 				<p style="">A Software Developer</p>
-				<p>I have made games, libraries, small applications and websites.</p>
-				<p>I have worked with a large range of programming languages and technologies including the following.</p>
-				<ul class="skill-list">
-					<li class="skill-list-item">
-						<i class="devicon-c-plain"></i>
-						<p>C</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-java-plain"></i>
-						<p>Java</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-javascript-plain"></i>
-						<p>Javascript</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-nodejs-plain"></i>
-						<p>Node JS</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-python-plain"></i>
-						<p>Python</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-html5-plain"></i>
-						<p>HTML</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-css3-plain"></i>
-						<p>CSS</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-linux-plain"></i>
-						<p>Linux</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-bash-plain"></i>
-						<p>Bash</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-powershell-plain"></i>
-						<p>Powershell</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-rust-original"></i>
-						<p>Rust</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-zig-plain"></i>
-						<p>Zig</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-sqlite-plain"></i>
-						<p>Sqlite</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-mysql-plain"></i>
-						<p>My SQL</p>
-					</li>
-					<li class="skill-list-item">
-						<i class="devicon-php-plain"></i>
-						<p>PHP</p>
-					</li>
-				</ul>
-			</pe-column>
-		</pe-section>
-
-		<h1>Projects</h1>
-		<hr class="section-separator">
-		<pe-section class="pe-column">
-			<pe-column class="subsection">
-				<h2><a href="https://github.com/LouisAlbanZiko/hermes" class="emphasize">Hermes</a></h2>
-				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<p>This website is served using the <a href="https://github.com/LouisAlbanZiko/hermes">Hermes WebServer</a>.</p>
-				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
-			</pe-column>
-			<pe-column class="subsection">
-				<h2><a href="https://wordlehelper.louisalbanziko.com" class="emphasize">Wordle Helper</a></h2>
-				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<p><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> is a game where you need to guess a secret 5 letter word. The secret word is the same for everyone and changes daily. For every guess you get some information back about the secret word in the form of colors:</p>
-				<ul>
-					<li>Grey means that the letter is not in the secret word (with some exception)</li>
-					<li>Yellow means the letter is contained in the secret word but not at that position</li>
-					<li>Green means that the letter is at the correct position</li>
-				</ul>
-				<p>Playing the game for a while, I got interested to see if I could optimize the guesses I made. This led me to <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">this video</a> from 3Blue1Brown which explained a simple optimization of the game. Based on the video, I implemented <a href="https://wordlehelper.louisalbanziko.com/">Wordle Helper</a> where you can enter the guesses and colors from the game and it will give you suggested words for the next guess.</p>
-				<p>The usage is as follows: You type a guess into Wordle and put the result in the Helper. The word you can by typing or using the onscreen keyboard and the colors by either right or left clicking the letters. Then type enter and the server will calculate the words that fit and out of those, the best guesses.</p>
-				<p>The application is written using <a href="https://github.com/LouisAlbanZiko/hermes">Hermes</a>. The code can be found <a href="https://github.com/LouisAlbanZiko/wordle_helper">here</a></p>
-			</pe-column>
-			<pe-column class="subsection">
-				<h2><a href="https://github.com/LouisAlbanZiko/blbctl" class="emphasize">blbctl</a></h2>
-				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<p><a href="https://github.com/LouisAlbanZiko/blbctl">BackLight Brightness ConTroL</a> is a command utility fo retrieving and changing the values of brightness of the backlight on linux systems.</p>
-			</pe-column>
-			<pe-column class="subsection">
-				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
-				<hr style="width: 50%; text-align: left; margin-left: 0;">
-				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
-				<p>The bot was written in python and used the <a href="https://developer.riotgames.com/apis">RIOT API</a> to retrieve data about games and the discord API (using a wrapper library) to ask certains games to be retrieved as well as calculating the statistics.</p>
-			</pe-column>
-			<pe-column style="justify-content: space-around;">
-				<h2 style="margin: 10px auto;">Checkout my other projects on github:</h2>
-				<pe-row style="justify-content: space-between; margin: 10px auto;">
-					<a href="https://github.com/LouisAlbanZiko" target="_blank">
-						<img src="/home/github-mark-white.png" width="64px" height="64px">
-					</a>
-				</pe-row>
-			</pe-column>
+				<p>I have made libraries, small applications, games and websites.</p>
 		</pe-section>
 
 		<h1>Work Experience</h1>

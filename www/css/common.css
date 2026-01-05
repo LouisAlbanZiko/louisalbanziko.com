@@ -23,6 +23,7 @@ pe-header > a {
 	padding: 15px 20px;
 	font-size: 20px;
 	text-decoration: none;
+	color: var(--color-contrast);
 }
 
 pe-header > #demo {

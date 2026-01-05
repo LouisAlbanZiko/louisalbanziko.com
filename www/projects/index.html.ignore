@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{global_css}}
+		<style>
+			.emphasize {
+				font-weight: 700;
+				color: var(--color-contrast);
+			}
+			.hide {
+				font-weight: 100;
+				color: var(--color-contrast);
+			}
+
+			i {
+				font-size: 2.4rem;
+			}
+			
+			hr {
+				border-color: var(--color-contrast);
+			}
+			hr.section-separator {
+				width: 35%;
+				text-align: center;
+				margin: auto;
+			}
+
+			h1 {
+				width: 100%;
+				text-align: center;
+				padding: 0.3rem 0;
+				margin-top: 100px;
+				color: var(--color-contrast);
+			}
+
+			h2 {
+				font-size: 2.0rem;
+			}
+
+			h1, h2, p {
+				margin: 0.3rem 0;
+			}
+
+			a {
+				color: var(--color-1);
+			}
+
+			pe-section {
+				padding: 0;
+				justify-content: space-around;
+			}
+
+			.subsection {
+				width: 60%;
+				margin: 20px auto;
+			}
+
+			.subsection > h2 > a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		{{header}}
+		<h1>Projects</h1>
+		<hr class="section-separator">
+		<pe-section class="pe-column">
+			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/hermes" class="emphasize">Hermes</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p>This website is served using the <a href="https://github.com/LouisAlbanZiko/hermes">Hermes WebServer</a>.</p>
+				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
+			</pe-column>
+			<pe-column class="subsection">
+				<h2><a href="https://wordlehelper.louisalbanziko.com" class="emphasize">Wordle Helper</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> is a game where you need to guess a secret 5 letter word. The secret word is the same for everyone and changes daily. For every guess you get some information back about the secret word in the form of colors:</p>
+				<ul>
+					<li>Grey means that the letter is not in the secret word (with some exception)</li>
+					<li>Yellow means the letter is contained in the secret word but not at that position</li>
+					<li>Green means that the letter is at the correct position</li>
+				</ul>
+				<p>Playing the game for a while, I got interested to see if I could optimize the guesses I made. This led me to <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">this video</a> from 3Blue1Brown which explained a simple optimization of the game. Based on the video, I implemented <a href="https://wordlehelper.louisalbanziko.com/">Wordle Helper</a> where you can enter the guesses and colors from the game and it will give you suggested words for the next guess.</p>
+				<p>The usage is as follows: You type a guess into Wordle and put the result in the Helper. The word you can by typing or using the onscreen keyboard and the colors by either right or left clicking the letters. Then type enter and the server will calculate the words that fit and out of those, the best guesses.</p>
+				<p>The application is written using <a href="https://github.com/LouisAlbanZiko/hermes">Hermes</a>. The code can be found <a href="https://github.com/LouisAlbanZiko/wordle_helper">here</a></p>
+			</pe-column>
+			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/blbctl" class="emphasize">blbctl</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/LouisAlbanZiko/blbctl">BackLight Brightness ConTroL</a> is a terminal utility for retrieving and changing the values of brightness of the display backlight on linux systems.</p>
+			</pe-column>
+			<pe-column class="subsection">
+				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
+				<p>The bot was written in python and used the <a href="https://developer.riotgames.com/apis">RIOT API</a> to retrieve data about games and the discord API (using a wrapper library) to ask certains games to be retrieved as well as calculating the statistics.</p>
+			</pe-column>
+			<pe-column style="justify-content: space-around;">
+				<h2 style="margin: 10px auto;">Checkout my other projects on github:</h2>
+				<pe-row style="justify-content: space-between; margin: 10px auto;">
+					<a href="https://github.com/LouisAlbanZiko" target="_blank">
+						<img src="/projects/github-mark-white.png" width="64px" height="64px">
+					</a>
+				</pe-row>
+			</pe-column>
+		</pe-section>
+	</body>
+</html>
