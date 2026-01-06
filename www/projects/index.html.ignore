@@ -90,6 +90,13 @@
 				<p><a href="https://github.com/LouisAlbanZiko/blbctl">BackLight Brightness ConTroL</a> is a terminal utility for retrieving and changing the values of brightness of the display backlight on linux systems.</p>
 			</pe-column>
 			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/pe_base64" class="emphasize">PE Base64</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/LouisAlbanZiko/pe_base64">PE Base64</a> is a small C library for encoding to and decoding from Base64.</p>
+				<p>The library works without allocating any memory. Instead it allows you to query the size of the output required for a given input.</p>
+				<p>Also, to make it more general, the encoding and decoding functions do not require the inputs to be null terminated but instead take in the size of the input in bytes.</p>
+			</pe-column>
+			<pe-column class="subsection">
 				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
