@@ -97,6 +97,19 @@
 				<p>Also, to make it more general, the encoding and decoding functions do not require the inputs to be null terminated but instead take in the size of the input in bytes.</p>
 			</pe-column>
 			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/c_log" class="emphasize">C Log</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/LouisAlbanZiko/c_log">C Log</a> is a small C library for logging in the C programming language.</p>
+				<p>Features include:</p>
+				<ul>
+					<li>different levels of logging being trace, info, warning, error and fatal.</li>
+					<li>multiple loggers can be created.</li>
+					<li>a custom output pattern can be created for each logger.</li>
+					<li>colors for each level of logging.</li>
+				</ul>
+				<p>Documentation can be found <a href="/projects/c_log/index.html">here</a>.</p>
+			</pe-column>
+			<pe-column class="subsection">
 				<h2><a href="https://github.com/kcuni18/discordXlol" class="emphasize">Discord X Lol</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
