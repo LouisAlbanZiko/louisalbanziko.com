@@ -115,6 +115,15 @@
 				<p><a href="https://github.com/kcuni18/discordXlol">Discord X Lol</a> is a discord bot which records data about <a href="https://www.leagueoflegends.com/en-us/">League of Legends</a> games. With that data the bot can then calculate certain statistics like average winrates, average KDA, winrates of certains champions etc.</p>
 				<p>The bot was written in python and used the <a href="https://developer.riotgames.com/apis">RIOT API</a> to retrieve data about games and the discord API (using a wrapper library) to ask certains games to be retrieved as well as calculating the statistics.</p>
 			</pe-column>
+			<pe-column class="subsection">
+				<h2><a href="https://github.com/LouisAlbanZiko/Sudoku" class="emphasize">Sudoku Solver</a></h2>
+				<hr style="width: 50%; text-align: left; margin-left: 0;">
+				<p><a href="https://github.com/LouisAlbanZiko/Sudoku">Sudoku Solver</a> is a small project I did in university for solving Sudoku.</p>
+				<p>The interesting part of this is not the algorithm used, which is essentially bruteforce, but the visualization part. I used the extended ASCII characters to form a grid and then ANSI characters for moving the cursor to the desired cell and trying different digits.</p>
+				<p>Since the Windows cmd doesn't support ANSI characters for moving the cursor I had to interact with Win32 API.</p>
+				<p>The user uses commands to interact with the program to load, save, solve or generate sudoku. Here is a representation of how that works:</p>
+				<img src="https://raw.githubusercontent.com/LouisAlbanZiko/Sudoku/refs/heads/master/solve.gif"/>
+			</pe-column>
 			<pe-column style="justify-content: space-around;">
 				<h2 style="margin: 10px auto;">Checkout my other projects on github:</h2>
 				<pe-row style="justify-content: space-between; margin: 10px auto;">
