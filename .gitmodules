@@ -1,6 +1,6 @@
 [submodule "hermes"]
 	path = hermes
-	url = git@github.com:LouisAlbanZiko/hermes.git
+	url = https://github.com/LouisAlbanZiko/hermes.git
 [submodule "cmark"]
 	path = cmark
-	url = git@github.com:LouisAlbanZiko/zig_cmark.git
+	url = https://github.com/LouisAlbanZiko/zig_cmark.git
