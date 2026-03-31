@@ -72,7 +72,7 @@
 				<p>It is written in Zig and comes with a custom HTTP parser, static files, templates and custom handlers for more specific functionality.</p>
 			</pe-column>
 			<pe-column class="subsection">
-				<h2><a href="https://wordlehelper.louisalbanziko.com" class="emphasize">Wordle Helper</a></h2>
+				<h2><a href="https://louisalbanziko.com/wordle" class="emphasize">Wordle Solver</a></h2>
 				<hr style="width: 50%; text-align: left; margin-left: 0;">
 				<p><a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a> is a game where you need to guess a secret 5 letter word. The secret word is the same for everyone and changes daily. For every guess you get some information back about the secret word in the form of colors:</p>
 				<ul>
@@ -80,7 +80,7 @@
 					<li>Yellow means the letter is contained in the secret word but not at that position</li>
 					<li>Green means that the letter is at the correct position</li>
 				</ul>
-				<p>Playing the game for a while, I got interested to see if I could optimize the guesses I made. This led me to <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">this video</a> from 3Blue1Brown which explained a simple optimization of the game. Based on the video, I implemented <a href="https://wordlehelper.louisalbanziko.com/">Wordle Helper</a> where you can enter the guesses and colors from the game and it will give you suggested words for the next guess.</p>
+				<p>Playing the game for a while, I got interested to see if I could optimize the guesses I made. This led me to <a href="https://www.youtube.com/watch?v=v68zYyaEmEA">this video</a> from 3Blue1Brown which explained a simple optimization of the game. Based on the video, I implemented <a href="https://louisalbanziko.com/wordle">Wordle Solver</a> where you can enter the guesses and colors from the game and it will give you suggested words for the next guess.</p>
 				<p>The usage is as follows: You type a guess into Wordle and put the result in the Helper. The word you can by typing or using the onscreen keyboard and the colors by either right or left clicking the letters. Then type enter and the server will calculate the words that fit and out of those, the best guesses.</p>
 				<p>The application is written using <a href="https://github.com/LouisAlbanZiko/hermes">Hermes</a>. The code can be found <a href="https://github.com/LouisAlbanZiko/wordle_helper">here</a></p>
 			</pe-column>
